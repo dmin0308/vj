@@ -20,3 +20,5 @@ console.log(family.familysite[1].atext, family.familysite[1].href)
 const mytag = `<a href="${family.familysite[1].href}">${family.familysite[1].atext}</a>`;
 
 console.log(mytag);
+
+//셀렉트형 네비게이션 DB 분리하고 접근하기/ ECMA 6기법
