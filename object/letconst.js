@@ -15,20 +15,19 @@ const family = {
     },
   ],
 };
-
-// window.onload = function(){
-//   //화면로딩이 완료시 처리
-
-// }
-// window.addEventListener('load', function(){
-//   document.body.innerHTML += family.d1text;
-//   //특정 태그안에 태그를 삽입하기
-
-// })
-
 window.addEventListener('load', function(){
-  document.querySelector("#family h2").innerHTML += family.d1text;
-  //특정 태그안에 태그를 삽입하기
+  document.querySelector("#family h2")
+  .innerHTML += family.d1text;
 
+  // document.querySelector("#family .git")
+  // .innerHTML += family.familysite[0].atext;
+
+  document.querySelector("#family ul")
+  .innerHTML = `<li>${family.familysite[0].atext}</li>`;
+  document.querySelector("#family ul")
+  .innerHTML += `<li>${family.familysite[1].atext}</li>`;
+  document.querySelector("#family ul")
+  .innerHTML += `<li>${family.familysite[2].atext}</li>`;
 })
+
 
