@@ -15,10 +15,20 @@ const family = {
     },
   ],
 };
-console.log(family.familysite[1].atext, family.familysite[1].href)
 
-const mytag = `<a href="${family.familysite[1].href}">${family.familysite[1].atext}</a>`;
+// window.onload = function(){
+//   //화면로딩이 완료시 처리
 
-console.log(mytag);
+// }
+// window.addEventListener('load', function(){
+//   document.body.innerHTML += family.d1text;
+//   //특정 태그안에 태그를 삽입하기
 
-//셀렉트형 네비게이션 DB 분리하고 접근하기/ ECMA 6기법
+// })
+
+window.addEventListener('load', function(){
+  document.querySelector("#family h2").innerHTML += family.d1text;
+  //특정 태그안에 태그를 삽입하기
+
+})
+
