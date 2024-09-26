@@ -13,7 +13,7 @@ const family = {
       atext: "피그마",
       href: "https://www.figma.com/design/Aw7jOFG239btKXJsnBIFYx/project_sulwhasoo?node-id=0-1&t=wiU0mNpZG4hRJEWf-1",
     },
-  ],
+  ]
 };
 
 

@@ -19,7 +19,10 @@ window.addEventListener("load", function () {
   ('click', function(){
     this.classList.toggle('open')
   })
+
+  
 });
+
 
 
 //함수 제작

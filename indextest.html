@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바 for 구문 테스트</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+    }
+
+    #family{
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: red;
+    }
+
+    #family h2{
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+#family ul{ /*숨김*/
+  position: absolute;
+  bottom: calc(100% - 1px);
+  left: 0;
+  right: 0;
+  border: 1px solid black;
+  border-bottom: 0;
+  padding: 0 1rem;
+  max-height: 0;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+#family.open ul{
+  max-height: 300px;
+}
+
+#family ul:after,
+#family ul:before{
+  content: "";
+  display: block;
+  height: 15px;
+}
+
+  </style>
+</head>
+
+<body>
+  <div id="family">
+    <h2></h2>
+    <ul>
+
+    </ul>
+  </div>
+
+
+  <script>
+    const family = {
+      h2text: "test",
+      testsite: [
+        {
+          atext: "네이버",
+          href: "http://www.naver.com"
+        },
+        {
+          atext: "구글",
+          href: "http://www.google.com"
+        },
+        {
+          atext: "유튜브",
+          href: "http://www.youtube.com"
+        },
+      ]
+    };
+
+    window.addEventListener("load",function(){
+
+      document.querySelector("#family h2").innerHTML= family.h2text;
+
+      let testlist = ""
+
+      for(x of family.testsite){
+        testlist += `<li>${x.atext}</li>`
+
+      }
+      document.querySelector("#family ul").innerHTML = testlist
+
+      this.document.querySelector("#family").addEventListener
+  ('click', function(){
+    this.classList.toggle('open')
+  })
+
+    });
+  </script>
+</body>
+</html>
