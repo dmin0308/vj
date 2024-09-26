@@ -1,0 +1,45 @@
+/* 템플릿 제작하기 */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+#family{
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: skyblue;
+}
+
+#family h2{
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+
+#family ul{ /*숨김*/
+  position: absolute;
+  bottom: calc(100% - 1px);
+  left: 0;
+  right: 0;
+  border: 1px solid black;
+  border-bottom: 0;
+  padding: 0 1rem;
+  max-height: 0;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+#family.open ul{
+  max-height: 300px;
+}
+
+#family ul:after,
+#family ul:before{
+  content: "";
+  display: block;
+  height: 15px;
+}
+
+/* 하단 */
