@@ -1,5 +1,5 @@
 const family = {
-  d1text: "Realativesite",
+  d1text: "관련 사이트",
   familysite: [
     {
       atext: "git",
@@ -15,21 +15,5 @@ const family = {
     },
   ],
 };
-
-let familytag='';
-familytag += `<h2>${family.d1text}</h2><ul>`;
-
-
-for(x of family.familysite ){
-  familytag +=`<li>${x.atext}</li>`
-}
-familytag +=`</ul>`;
-
-window.addEventListener('load', function(){
-
-  document.querySelector("#family")
-  .innerHTML = familytag;
-
-})
 
 
