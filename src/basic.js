@@ -19,8 +19,11 @@ window.addEventListener("load", function () {
   ('click', function(){
     this.classList.toggle('open')
   })
-
-  
+  const allMenubtn = 
+  this.document.querySelector("#hd_allGNB_ndm");
+  allMenubtn.addEventListener('click', function(){
+    document.body.classList.toggle('menuOpen')
+  })
 });
 
 
