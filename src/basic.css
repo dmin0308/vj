@@ -11,6 +11,22 @@
 #hd .inner nav a {
   color: black;
 }
+#hd .inner nav > ul::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 0;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  transition: height 0.5s ease-in-out;
+}
+#hd .inner nav > ul:hover::before {
+  height: 15rem;
+}
 #hd .inner nav > ul > li:nth-child(2) .position-absolute {
   right: unset;
 }
@@ -19,17 +35,17 @@
 }
 #hd .inner nav > ul > li > a {
   font-size: 1.5em;
-  padding: 0 1.5rem;
-  text-align: center;
+  padding: 30px 1.5rem;
 }
 #hd .inner nav > ul > li .position-absolute {
-  background-color: skyblue;
+  background-color: white;
   left: 0;
   right: 0;
   top: 100%;
   min-width: 100px;
   max-height: 0;
   overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
 }
 #hd .inner nav > ul > li .position-absolute ul {
   display: flex;
@@ -37,7 +53,17 @@
   row-gap: 10px;
   padding: 1rem 1rem;
   border: 1px solid #ccc;
+  height: 15rem;
+  transition: height 0.5s ease-in-out;
   align-items: center;
+}
+#hd .inner nav > ul > li .position-absolute ul::before {
+  content: "";
+  display: block;
+  height: 1rem;
+}
+#hd .inner nav > ul > li .position-absolute ul:hover {
+  transition: 0.5s;
 }
 #hd .inner nav > ul > li .position-absolute ul li {
   width: 100%;
@@ -47,8 +73,8 @@
 #hd .inner nav > ul > li:hover > a {
   color: orange;
 }
-#hd .inner nav > ul > li:hover .position-absolute {
-  transition: 0.5s;
+#hd .inner nav > ul:hover .position-absolute {
+  transition: max-height 0.5s ease-in-out;
   max-height: 300px;
 }
 
