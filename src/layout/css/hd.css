@@ -83,3 +83,12 @@ body.menuOpen #hd #hd_allmenu_bby {
 body.menuOpen #hd nav {
   display: block !important;
 }
+
+body.slide-0 #hd a,
+body.slide-2 #hd a {
+  color: #fff !important;
+}
+body.slide-0 #mainBanner .swiper-slide,
+body.slide-2 #mainBanner .swiper-slide {
+  color: #fff !important;
+}
