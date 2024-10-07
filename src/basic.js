@@ -24,6 +24,13 @@ window.addEventListener("load", function () {
   allMenubtn.addEventListener('click', function(){
     document.body.classList.toggle('menuOpen')
   })
+  // 다음작업 시작
+
+  for(x in mynavi){
+  this.document.querySelectorAll('#navi >ul>li>a')[x].innerHTML = mynavi[x].mainMenu.name;
+  }
+
+
 });
 
 

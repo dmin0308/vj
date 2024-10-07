@@ -15,5 +15,57 @@ const family = {
     },
   ]
 };
+const mynavi = [
+  {
+    mainMenu: { name: "첫메뉴", link: "#" },
+    subMenus: [
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" }
+    ]
+  },
+  {
+    mainMenu: { name: "두번째메뉴", link: "#" },
+    subMenus: [
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" },
+      { name: "밤양갱", link: "#" }
+    ]
+  },
+  {
+    mainMenu: { name: "세번째메뉴", link: "#" },
+    subMenus: [
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" }
+    ]
+  },
+  {
+    mainMenu: { name: "대메뉴", link: "#" },
+    subMenus: [
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" }
+    ]
+  },
+  {
+    mainMenu: { name: "대메뉴", link: "#" },
+    subMenus: [
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" },
+      { name: "소메뉴", link: "#" }
+    ]
+  }
+];
 
 
