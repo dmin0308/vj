@@ -1,8 +1,14 @@
 @charset "UTF-8";
+.itemcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #hd .inner h1 .logo:before {
   content: "svg로고";
 }
-#hd .inner #hd_allGNB_ndm {
+#hd .inner #hd_allmenu_bby {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/></svg>');
   width: 2rem;
   height: 2rem;
@@ -11,7 +17,7 @@
 #hd .inner nav a {
   color: black;
 }
-#hd .inner nav > ul::before {
+#hd .inner nav > ul:before {
   content: "";
   display: block;
   position: absolute;
@@ -22,60 +28,38 @@
   background-color: white;
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
-  transition: height 0.5s ease-in-out;
+  transition: 0.5s;
 }
-#hd .inner nav > ul:hover::before {
+#hd .inner nav > ul:hover:before {
   height: 15rem;
 }
 #hd .inner nav > ul > li:nth-child(2) .position-absolute {
   right: unset;
 }
 #hd .inner nav > ul > li:nth-child(2) .position-absolute ul {
-  display: flex;
+  display: inline-block;
 }
 #hd .inner nav > ul > li > a {
   font-size: 1.5em;
   padding: 30px 1.5rem;
 }
 #hd .inner nav > ul > li .position-absolute {
-  background-color: white;
   left: 0;
   right: 0;
   top: 100%;
   min-width: 100px;
-  max-height: 0;
+  height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
-}
-#hd .inner nav > ul > li .position-absolute ul {
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-  padding: 1rem 1rem;
-  border: 1px solid #ccc;
-  height: 15rem;
-  transition: height 0.5s ease-in-out;
-  align-items: center;
-}
-#hd .inner nav > ul > li .position-absolute ul::before {
-  content: "";
-  display: block;
-  height: 1rem;
-}
-#hd .inner nav > ul > li .position-absolute ul:hover {
   transition: 0.5s;
 }
-#hd .inner nav > ul > li .position-absolute ul li {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+#hd .inner nav > ul > li .position-absolute ul {
+  padding: 1rem;
 }
 #hd .inner nav > ul > li:hover > a {
   color: orange;
 }
 #hd .inner nav > ul:hover .position-absolute {
-  transition: max-height 0.5s ease-in-out;
-  max-height: 300px;
+  height: 15rem;
 }
 
 @media (max-width: 991px) {
@@ -97,12 +81,24 @@ body.menuOpen:after {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
 }
-body.menuOpen #hd #hd_allGNB_ndm {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 1 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>');
+body.menuOpen #hd #hd_allmenu_bby {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">         <path fill-rule="evenodd" d="M1.5 1.5a.5.5 0 0 1 .707 0L8 7.293 14.793 1.5a.5.5 0 0 1 .707.707L8.707 8l6.793 6.793a.5.5 0 0 1-.707.707L8 8.707 1.5 14.5a.5.5 0 0 1-.707-.707L7.293 8 1.5 1.5z"/></svg>');
   width: 2rem;
   height: 2rem;
-  background-size: cover;
 }
 body.menuOpen #hd nav {
   display: block !important;
+}
+
+#mainBanner .swiper-slide {
+  background-color: #000;
+  color: white;
+  font-size: 100px;
+  opacity: 1;
+  transition: 0.5s;
+}
+#mainBanner .swiper-slide.swiper-slide-active {
+  opacity: 0.5;
+  font-size: 200px !important;
+  background-color: red;
 }
