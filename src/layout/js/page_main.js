@@ -9,9 +9,19 @@ window.addEventListener("load", function () {
       delay: 6000, // 자동 롤링 딜레이 (3초)
       disableOnInteraction: false, // 사용자 상호작용 후에도 자동 롤링 유지
     },
+    pagination: {
+      el: ".indicate",
+      clickable: true,
+      renderBullet: function (index, className) {
+        // Use Swiper's internal method to access the slide
+        var swiperSlide = this.slides[index];
+        // Retrieve the data-btnmsg attribute using the dataset property
+        var btnMsg = swiperSlide.dataset.btnmsg;
+        return '<span class="' + className + ' w-auto h-auto p-2 mx-3 bg-transparent border border-white ">' + btnMsg + '</span>';
+      },
+    },
     on: {
       init: function () {
-        
 
       },
       realIndexChange: function () {

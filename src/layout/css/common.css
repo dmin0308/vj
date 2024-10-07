@@ -14,4 +14,7 @@ a{ text-decoration: none; }
   justify-content: center;
 }
 
+.zup{
+  z-index: 100;
+}
 
