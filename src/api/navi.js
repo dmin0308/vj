@@ -37,15 +37,6 @@ window.addEventListener('load', function(){
   this.document.querySelector("#family h2").addEventListener('click', function(){
     this.parentNode.classList.toggle('open');
   })
-
-
-
-
-  
- 
-
-
-
 })
 
 // 함수제작
