@@ -12,11 +12,9 @@ window.addEventListener("load", function () {
     pagination: {
       el: ".indicate",
       clickable: true,
-      renderBullet: function (index, className) {
-        // Use Swiper's internal method to access the slide
-        var swiperSlide = this.slides[index];
-        // Retrieve the data-btnmsg attribute using the dataset property
-        var btnMsg = swiperSlide.dataset.btnmsg;
+      renderBullet: function (index, className) { // 페이지네이션 불릿을 렌더링하는 사용자 정의 함수
+        var swiperSlide = this.slides[index]; // 현재 인덱스의 슬라이드 가져오기
+        var btnMsg = swiperSlide.dataset.btnmsg; // 슬라이드의 data-btnmsg 속성 가져오기
         return '<span class="' + className + ' w-auto h-auto p-2 mx-3 bg-transparent border border-white ">' + btnMsg + '</span>';
       },
     },
@@ -30,7 +28,7 @@ window.addEventListener("load", function () {
         const realIndex = this.realIndex; // 실제 슬라이드의 인덱스
         console.log(activeIndex, realIndex);
 
-        const classesToRemove = Array.from(document.body.classList).filter(
+        const classesToRemove = Array.from(document.body.classList).filter( // "slide-"로 시작하는 모든 클래스를 제거
           (className) => className.startsWith("slide-"));
           //array 메서드 filter를 통해서 해당 조건의 값만 필터링 하므로 데이터 타입은 여전히 배열
         document.body.classList.remove(...classesToRemove);
