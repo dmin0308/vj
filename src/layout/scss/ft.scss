@@ -7,9 +7,10 @@
   h2 {
     border: 1px solid #000;
     padding: 0.5rem;
+    
   }
 
-  ul { //숨김
+  ul { // 숨김
     position: absolute;
     bottom: calc(100% - 1px);
     left: 0;
@@ -28,8 +29,8 @@
       height: 15px;
     }
   }
-
-  &.open ul {
+  &.open   ul {
     max-height: 300px;
   }
+
 }

@@ -81,11 +81,11 @@ body.menuOpen #hd nav {
 
 body.slide-0 #hd a,
 body.slide-2 #hd a {
-  color: #fff !important;
+  color: white !important;
 }
 body.slide-0 #mainBanner .swiper-slide,
 body.slide-2 #mainBanner .swiper-slide {
-  color: #fff !important;
+  color: white !important;
 }
 
 body #family {
